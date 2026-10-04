@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "landmine",
+	"version": "${version}",
+	"name": "Landmine-Mod",
+	"description": "This is a landmine mod",
+	"authors": [
+		"Wmy"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/landmine/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.wmy.landmine.LandmineMod"
+		],
+		"client": [
+			"com.wmy.landmine.LandmineModClient"
+		]
+	},
+	"mixins": [
+		"landmine.mixins.json",
+		{
+			"config": "landmine.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

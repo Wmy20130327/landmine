@@ -19,7 +19,7 @@
 			"com.wmy.landmine.LandmineMod"
 		],
 		"client": [
-			"com.wmy.landmine.LandmineModClient"
+			"com.wmy.landmine.client.LandmineModClient"
 		]
 	},
 	"mixins": [

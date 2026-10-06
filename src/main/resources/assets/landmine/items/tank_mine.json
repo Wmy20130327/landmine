@@ -1,0 +1,7 @@
+{
+  "_comment": "【修复紫黑块·核心】MC 26.1 新增 Item Definition 系统：物品贴图由 assets/<模组>/items/<物品ID>.json 决定，缺少此文件即显示紫黑块。本文件把 landmine:tank_mine 物品的模型指向 models/item/tank_mine.json",
+  "model": {
+    "type": "minecraft:model",
+    "model": "landmine:item/tank_mine"
+  }
+}

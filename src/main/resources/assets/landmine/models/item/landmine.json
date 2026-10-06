@@ -1,6 +1,8 @@
 {
+  "_comment": "【修复紫黑块·第1步】parent 原为 item/generated（缺命名空间），改为 minecraft:item/generated",
   "parent": "minecraft:item/generated",
   "textures": {
+    "_comment2": "【修复紫黑块·第1步】layer0 原为 landmine:landmine（路径不全），改为 landmine:item/landmine 指向 textures/item/landmine.png",
     "layer0": "landmine:item/landmine"
   }
 }

@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.function.Function;
 
@@ -44,8 +45,10 @@ public class ModItems {
         LandmineMod.LOGGER.info("Landmine Mod Items Registered Successfully!");
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((fabricCreativeModeTabOutput -> {
-                    fabricCreativeModeTabOutput.accept(LANDMINE);
-                    fabricCreativeModeTabOutput.accept(TANK_MINE);
+                    // 26.1 起 accept(ItemLike) 重载已被移除，必须传入 ItemStack，
+                    // 否则 lambda 无法解析为 ModifyOutput，运行时报错导致初始化中断
+                    fabricCreativeModeTabOutput.accept(new ItemStack(LANDMINE));
+                    fabricCreativeModeTabOutput.accept(new ItemStack(TANK_MINE));
                     LandmineMod.LOGGER.info("Landmine Mod Items Added to Creative Mode Tab Successfully!");
                 }));
     }
